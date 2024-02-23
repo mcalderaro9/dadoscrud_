@@ -1,0 +1,40 @@
+{
+  "pessoas": [
+    {
+      "id": 1,
+      "nome": "Maria",
+      "idade": 20,
+      "cpf": "123.456.789-00"
+    },
+    {
+      "nome": "Catarina",
+      "idade": "23",
+      "cpf": "111.222.333-09",
+      "id": 6
+    },
+    {
+      "nome": "Clarice Amaral",
+      "idade": "29",
+      "cpf": "111.222.536-09",
+      "id": 8
+    },
+    {
+      "nome": "",
+      "email": "",
+      "senha": "",
+      "id": 9
+    },
+    {
+      "nome": "Camila Carvalho",
+      "idade": "23",
+      "cpf": "444.333.222-98",
+      "id": 10
+    },
+    {
+      "nome": "Marianne Sheridan",
+      "idade": "19",
+      "cpf": "119.232.465-78",
+      "id": 11
+    }
+  ]
+}

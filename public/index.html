@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <header>
+            <div class="header">
+            <div class="logo">
+                <a href="index.html" id="logo">DC</a></div>
+            <div class="header-right">
+              <a href="index.html" class="active">Acesso</a>
+              <a href="post.html">Cadastro</a>
+              <a href="login.html">Atualização</a>
+              <a href="login2.html">Deletar</a>
+            </div>
+          </div>
+        </header>
+        
+    
+    <form>
+        <h3>ACESSAR DADOS</h3>
+        <table id="tabela">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>CPF</th>
+            </tr>
+            <tbody id="tabela-corpo"></tbody>
+        </table>
+    </form> 
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <script>
+          //GET
+          fetch(`pessoas`)
+        .then(response => response.json())
+        .then(data => {
+            const tabela = document.getElementById('tabela-corpo');
+            //Utilizado o loop ForEach para interar cada objeto no array retornado a API
+            data.forEach((objeto) => {
+                //Adicionado essa string de template ao conteudo HTML do corpo da tabela.
+                const linha = `<tr>
+                    <td>${objeto.id}</td>
+                    <td>${objeto.nome}</td>
+                    <td>${objeto.idade}</td>
+                    <td>${objeto.cpf}</td>
+                </tr>`;
+                tabela.innerHTML += linha;
+            })
+        })
+          
+    </script>
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-info">
+            <h3>Dados</h3>
+            <p>Endereço: Avenida dos Bancos, 1234<br>
+            Mogi das Cruzes, SP<br>
+            CEP: 12345-678</p>
+        </div>
+        <div class="footer-contact">
+            <h3>Contato</h3>
+            <p>Email: dadosDC@empresa.com<br>
+            Telefone: (11) 3456-7890</p>
+        </div>
+        <div class="footer-social">
+            <h3>Redes Sociais</h3>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom-footer">
+        <p>© 2023 Dados. Todos os direitos reservados</p>
+    </div>
+</footer>
+</center>
+
+
+</body>
+</html>

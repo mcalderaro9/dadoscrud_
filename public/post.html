@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <header>
+            <div class="header">
+            <div class="logo">
+                <a href="index.html" id="logo">DC</a></div>
+            <div class="header-right">
+              <a href="index.html" class="active">Acesso</a>
+              <a href="post.html">Cadastro</a>
+              <a href="login.html">Atualização</a>
+              <a href="login2.html">Deletar</a>
+            </div>
+          </div>
+        </header>
+   
+    <form>
+        <h3>CADASTRAR DADOS</h3>
+        <label>CPF</label>
+        <br>
+        <input type="text" id="cpfCadastro" placeholder="Ex: 000.000.000-00">
+        <br>
+        <label>Nome</label>
+        <br>
+        <input type="text" id="nome" placeholder="Digite seu nome">
+        <br>
+        <label>Idade</label>
+        <br>
+        <input type="text" id="idade" placeholder="Digite sua idade">
+        <br>
+        <input type="button" onclick="enviarDados()" value="Enviar" class="button">
+        <br>
+    </form> 
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    
+
+    <script>
+         //POST
+         function enviarDados(){
+            const nome = document.getElementById('nome').value;
+            const idade = document.getElementById('idade').value;
+            const cpf = document.getElementById('cpfCadastro').value;
+
+            fetch('pessoas',{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ nome: nome, idade: idade, cpf: cpf})
+            })
+            .then(response => response.json())
+            .then(data => {
+            alert("Cadastrado com sucesso!")
+                // limpa os inputs do formulário
+                document.getElementById('nome').value = '';
+                document.getElementById('idade').value = '';
+                document.getElementById('cpfCadastro').value = '';
+            });
+            
+            
+        }
+          
+    </script>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-info">
+                <h3>Dados</h3>
+                <p>Endereço: Avenida dos Bancos, 1234<br>
+                Mogi das Cruzes, SP<br>
+                CEP: 12345-678</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contato</h3>
+                <p>Email: dadosDC@empresa.com<br>
+                Telefone: (11) 3456-7890</p>
+            </div>
+            <div class="footer-social">
+                <h3>Redes Sociais</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <p>© 2023 Dados. Todos os direitos reservados</p>
+        </div>
+    </footer>
+</center>
+
+</body>
+</html>

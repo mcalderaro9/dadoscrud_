@@ -1,0 +1,251 @@
+/* HEADER */
+  .header {
+    overflow: hidden;
+    background-color: rgb(26, 33, 68);
+    padding-top: 40px;
+  }
+  
+
+  body{
+    background-image: url(6699632-tecnologia-conexao-circuito-sistema-design-fundo-abstrato-gratis-vetor.jpg);
+  }
+
+  .logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* centraliza a imagem */
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  /* Estilo dos links do cabeçalho */
+  .header a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    margin-right: 5px;
+  }
+
+  /* Mudar o background color quando o mouse está em cima */
+  .header-right a:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    align-items: center;
+  }
+  
+  
+ *{
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+  
+  /* Adicione consultas de mídia para maior capacidade de resposta - quando a tela tiver 500 px de largura ou menos, empilhe os links uns sobre os outros */
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .header-right {
+      float: none;
+    }
+  }
+  
+  hr {
+      border: 0;
+      border-top: 1px solid #000000;
+  }
+  
+  .social-media {
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-wrap: wrap;
+  }
+  .social-media a {
+    color: white;
+    margin: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+  }
+  .social-media a ion-icon {
+    color: white;
+    background-color: black;
+  }
+  .social-media a:hover ion-icon {
+    color:indianred;
+    transform: translateY(5px);
+  }
+  
+
+a{
+    color: black;
+    text-decoration: none;
+    margin-left: 10%;
+    text-align: center;
+}
+
+a:hover {
+    color: #ccc; /* Cor quando o mouse passa por cima */
+}
+
+/* Main */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+input[type="text"], input[type="date"] {
+    width: 30%;
+    padding: 10px;
+    margin: 10px 0;
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    resize: vertical;
+}
+input[type="submit"] {
+    background-color:rgb(26, 33, 68);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+input[type="submit"]:hover {
+    background-color: #024f63;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.caixa{
+  border: none;
+  padding: 10px 80px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+
+a:hover {
+    color: #ccc; /* Cor quando o mouse passa por cima */
+}
+
+
+h1,h2,h3,p{
+  color: white;
+}
+
+
+label{
+  color: white;
+}
+
+/* Tabela */
+#tabela {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: rgb(26, 33, 68); /* Definir o fundo da tabela como branco */
+}
+
+#tabela th, #tabela td {
+  border: 1px solid rgb(26, 33, 68);
+  padding: 8px;
+  text-align: left;
+  color: #fff;
+  background-color: rgb(26, 33, 68); /* Definir o fundo das células como branco */
+}
+
+#tabela th {
+  color: rgb(255, 255, 255);
+}
+
+#tabela tr:nth-child(even) {
+  background-color: rgb(26, 33, 68); /* Definir o fundo das linhas como branco */
+}
+
+#tabela tr:hover {
+  background-color: rgb(255, 255, 255); /* Manter a mesma cor de fundo ao passar o mouse */
+}
+
+.button{
+  background-color: rgb(26, 33, 68);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+  #logo{
+    font-size: 38px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+
+
+/* Rodapé */
+.site-footer {
+    background-color: rgb(26, 33, 68);
+    color: #fff;
+    padding: 40px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.site-footer h3 {
+    color: #fff;
+}
+
+.footer-info,
+.footer-contact,
+.footer-social {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-social ul li {
+    margin-bottom: 10px;
+}
+
+.footer-social ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bottom-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+footer{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+
+}
